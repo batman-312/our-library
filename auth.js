@@ -17,7 +17,7 @@ function login() {
       sessionStorage.setItem("libraryUser", username);
     }
 
-    window.location.href = "pg3.html";
+    window.location.href = "library.html";
   } else {
     error.style.display = "block";
   }

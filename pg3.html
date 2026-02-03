@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<head>
+  <script>
+  const hasAccess =
+    localStorage.getItem("pg3Access") === "true" ||
+    sessionStorage.getItem("pg3Access") === "true";
+
+  if (!hasAccess) {
+    window.location.href = "password.html";
+  }
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You, My Love ❤️</title>
+
+  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="overlays/lyrics/lyrics.css" />
+    <link rel="stylesheet" href="overlays/Book/Book.css" />
+    <link rel="stylesheet" href="overlays/papers/papers.css">
+    <link rel="stylesheet" href="overlays/special-book/special-book.css">
+    <link rel="stylesheet" href="overlays/photo/photo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet">
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap"
+  rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap"
+  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cantata+One&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+<p id="welcome"></p>
+
+<script>
+  const user =
+    localStorage.getItem("pg3User") ||
+    sessionStorage.getItem("pg3User");
+
+  if (user) {
+    document.getElementById("welcome").innerText =
+      `Welcome, ${user} ❤️`;
+  }
+</script>
+
+
+  <div class="scene">
+  <div class="background">
+
+    <img src="Assets/Images/light-chord(1).png" id="lightCord" class="light-cord" />
+    <div class="lamp-glow"></div>
+
+    <div class="tea-steam">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="book-icon" id="book"></div>
+    <div class="papers-icon" id="papers"></div>
+    <div id="bookmark" class="bookmark-icon"></div>
+    <div class="frame-container">
+      <div class="frame-icon" id="frame"></div>
+    </div>  
+
+    <div class="record-player">
+      <div class="cd"></div>
+      <div class="tone-arm" id="toneArm"></div>
+    </div>
+
+    <div id="lyrics-box" class="lyrics hidden">
+      <div id="lyrics-line"></div>
+    </div>
+
+  </div>
+
+  <div id="book-overlay" class="book-overlay hidden">
+<div class="book-wrapper">
+    <button class="book-close">×</button>
+
+    <div class="book-open">
+  <div class="page left">
+    <p id="page-left"></p>
+  </div>
+
+  <div class="page right">
+    <p id="page-right"></p>
+  </div>
+</div>
+
+<div class="book-nav">
+  <button id="prev-page">‹</button>
+  <button id="next-page">›</button>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="special-book-overlay" class="special-book-overlay">
+    <div class="special-book-wrapper">
+ <div class="book-overlay-bookmark"></div>
+
+      <button id="specialBookClose" class="special-book-close">×</button>
+      <div class="special-book-open">
+        <div id="specialBookContent" class="special-book-content">
+        </div>
+      </div>
+      <div id="specialDialogue" class="special-dialogue">
+        <img
+          src="Assets/Images/speech-bubble.svg"
+          alt=""
+          class="speech-bubble-svg"
+        />
+
+        <div class="speech-bubble-text">
+          my favourite <br> part of this<br> book
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="particles"></div>
+
+  <audio id="vinylAudio" src="Assets/Audio/vinyl-crackle.mp3" preload="auto" loop></audio>
+  <audio id="songAudio" src="Assets/Audio/song1.mp3" preload="auto"></audio>
+  <audio id="vinylPop" src="Assets/Audio/vinyl-pop.m4a" preload="auto"></audio>
+
+<audio id="pageNextSound" src="overlays/Book/next.wav" preload="auto"></audio>
+<audio id="pagePrevSound" src="overlays/Book/prev.wav" preload="auto"></audio>
+</div>
+  
+
+ <div id="intro-blur">
+  <div class="intro-text">
+    <p class="intro-line">our cozy home library we talked about</p>
+    <p class="intro-sub">*click anywhere*</p>
+  </div>
+ </div>
+
+<div id="vinyl-focus">
+  <div class="vinyl-blur"></div>
+
+  <img src="overlays/lyrics/vinyl.png" class="vinyl-disc" alt="">
+<img
+  src="overlays/lyrics/tone-arm-overlay.png"
+  id="toneArmOverlay"
+  class="tone-arm-overlay"
+  alt=""
+>
+  
+</div>
+
+  <div id="overlay-root"></div>
+
+  <script src="script.js"></script>
+    <script src="overlays/lyrics/lyrics.js"></script>
+    <script src="overlays/Book/Book.js"></script>
+    <script src="overlays/papers/papers.js"></script>
+    <script src="overlays/special-book/special-book.js"></script>
+    <script src="overlays/photo/photo.js"></script>
+
+
+
+</body>
+</html>

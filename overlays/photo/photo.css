@@ -1,0 +1,43 @@
+/* =========================================
+   PHOTO OVERLAY
+========================================= */
+
+.photo-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.photo-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.photo-overlay img:hover {
+  transform: scale(1.2);
+}
+/* ---------- Photo ---------- */
+
+.photo-overlay img {
+  max-width: 80%;
+  max-height: 80%;
+
+  border-radius: 0px;
+  box-shadow:
+    0 0px 0px rgba(0, 0, 0, 0);
+
+  pointer-events: none;
+  user-select: none;
+}

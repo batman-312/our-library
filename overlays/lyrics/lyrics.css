@@ -1,0 +1,140 @@
+/* ======================================================
+   LYRICS OVERLAY (VINYL PLAYER)
+====================================================== */
+
+.lyrics {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  min-width: 260px;
+  max-width: 70%;
+  padding: 14px 22px;
+
+  background: rgba(10, 10, 10, 0.55);
+  backdrop-filter: blur(6px);
+
+  border-radius: 14px;
+
+  color: rgba(255, 245, 235, 0.92);
+  font-family: "Apple Chancery", "Segoe Script", cursive;
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.6;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+
+  z-index: 60;
+}
+
+.lyrics.visible {
+  opacity: 1;
+}
+
+/* ======================================================
+   LYRIC LINE ANIMATION
+====================================================== */
+
+#lyrics-line {
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* When a new line is active */
+#lyrics-line.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================
+   VINYL FOCUS OVERLAY
+================================ */
+
+#vinyl-focus {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#vinyl-focus.active {
+  opacity: 0.97;
+  pointer-events: none;
+}
+
+/* ---------- Vinyl disc ---------- */
+.vinyl-disc {
+  position: absolute;
+  left: -8%;
+  bottom: -15%;
+  z-index: 1;
+
+  width: 540px;
+  height: 520px;
+  border-radius: 50%;
+
+  background: url("Assets/Images/vinyl.png") center / contain no-repeat;
+
+  animation: vinylSpin var(--spin-speed, 6s) linear infinite;
+  box-shadow: 0 40px 90px rgba(17, 4, 4, 0.705);
+}
+
+@keyframes vinylSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+
+/* =========================================
+   OVERLAY TONE ARM 
+========================================= */
+
+.tone-arm-overlay {
+  position: absolute;
+  right: 73%;
+  top: 71%;
+
+  width: 220px;
+  height: auto;
+
+  transform-origin: 12% 90%;
+  transform: rotate(22deg);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    transform 1.1s cubic-bezier(.22,1,.36,1),
+    opacity 0.8s ease;
+filter: drop-shadow(0, 0, 0, 1) sepia(50%);
+  z-index: 1;
+}
+
+/* visible but not yet on vinyl */
+#vinyl-focus.active .tone-arm-overlay {
+  opacity: 0.7;
+  pointer-events: auto;
+}
+
+/* arm moves onto vinyl */
+.tone-arm-overlay.engaged {
+  transform: rotate(-15deg);
+}
+
+/* arm returns back */
+.tone-arm-overlay.disengaged {
+  transform: rotate(22deg);
+}

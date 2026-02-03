@@ -1,5 +1,5 @@
-// 🔐 ONE universal password
-const UNIVERSAL_PASSWORD = "pv=nrt"; // your password
+// 🔐 Universal password (only you know)
+const UNIVERSAL_PASSWORD = "pv=nrt"; // change anytime
 
 function login() {
   const username = document.getElementById("username").value.trim();
@@ -10,13 +10,11 @@ function login() {
   if (username.length > 0 && password === UNIVERSAL_PASSWORD) {
 
     if (remember) {
-      // persistent login
-      localStorage.setItem("pg3Access", "true");
-      localStorage.setItem("pg3User", username);
+      localStorage.setItem("libraryAccess", "true");
+      localStorage.setItem("libraryUser", username);
     } else {
-      // session-only login
-      sessionStorage.setItem("pg3Access", "true");
-      sessionStorage.setItem("pg3User", username);
+      sessionStorage.setItem("libraryAccess", "true");
+      sessionStorage.setItem("libraryUser", username);
     }
 
     window.location.href = "pg3.html";

@@ -5,8 +5,8 @@
 <head>
   <script>
   const hasAccess =
-    localStorage.getItem("pg3Access") === "true" ||
-    sessionStorage.getItem("pg3Access") === "true";
+    localStorage.getItem("libraryAccess") === "true" ||
+    sessionStorage.getItem("libraryAccess") === "true";
 
   if (!hasAccess) {
     window.location.href = "password.html";
@@ -43,19 +43,19 @@
 
 </head>
 <body>
+
 <p id="welcome"></p>
 
 <script>
   const user =
-    localStorage.getItem("pg3User") ||
-    sessionStorage.getItem("pg3User");
+    localStorage.getItem("libraryUser") ||
+    sessionStorage.getItem("libraryUser");
 
   if (user) {
     document.getElementById("welcome").innerText =
-      `Welcome, ${user} ❤️`;
+      `Welcome to our library, ${user} ❤️`;
   }
 </script>
-
 
   <div class="scene">
   <div class="background">

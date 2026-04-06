@@ -24,6 +24,14 @@ window.openOverlay = function (type) {
       }
       break;
 
+      case "OpenWhen":
+  if (typeof openWhenOverlay === "function") {
+    openWhenOverlay();
+  } else {
+    console.warn("OpenWhen overlay not loaded");
+  }
+  break;
+
     default:
       console.warn("Unknown overlay type:", type);
   }
@@ -78,6 +86,88 @@ if (book) {
   book.addEventListener("click", () => {
     openOverlay("Book");
   });
+}
+
+function openBookOverlay() {
+  const root = document.getElementById("overlay-root");
+
+  const overlay = document.createElement("div");
+  overlay.className = "book-overlay visible";
+
+  overlay.innerHTML = `
+    <div class="book-wrapper">
+      <button class="book-close">×</button>
+
+      <div class="book-open">
+        <div class="page left">
+          <p id="page-left"></p>
+        </div>
+
+        <div class="page right">
+          <p id="page-right"></p>
+        </div>
+      </div>
+
+      <div class="book-nav">
+        <button id="prev-page">‹</button>
+        <button id="next-page">›</button>
+      </div>
+    </div>
+  `;
+
+  root.appendChild(overlay);
+
+  
+  const pageLeft = overlay.querySelector("#page-left");
+  const pageRight = overlay.querySelector("#page-right");
+  const nextBtn = overlay.querySelector("#next-page");
+  const prevBtn = overlay.querySelector("#prev-page");
+  const closeBtn = overlay.querySelector(".book-close");
+
+  /* =========================
+     STATE
+  ========================= */
+  let spreadIndex = 0;
+
+  /* =========================
+     RENDER
+  ========================= */
+  function renderPages() {
+    pageLeft.innerHTML = pages[spreadIndex * 2] || "";
+    pageRight.innerHTML = pages[spreadIndex * 2 + 1] || "";
+
+    prevBtn.style.visibility = spreadIndex === 0 ? "hidden" : "visible";
+    nextBtn.style.visibility =
+      spreadIndex >= Math.floor(pages.length / 2) - 1
+        ? "hidden"
+        : "visible";
+  }
+
+  renderPages();
+
+  /* =========================
+     EVENTS
+  ========================= */
+
+  nextBtn.onclick = () => {
+    if (spreadIndex < Math.floor(pages.length / 2) - 1) {
+      spreadIndex++;
+      renderPages();
+      playWithRandomPitch(nextSound);
+    }
+  };
+
+  prevBtn.onclick = () => {
+    if (spreadIndex > 0) {
+      spreadIndex--;
+      renderPages();
+      playWithRandomPitch(prevSound);
+    }
+  };
+
+  closeBtn.onclick = () => {
+    overlay.remove();
+  };
 }
 
 /* ======================================================
@@ -380,5 +470,51 @@ if (toneArmOverlay && songAudio && vinylFocus) {
     setTimeout(() => {
       vinylFocus.classList.remove("active");
     }, 900);
+  });
+}
+
+
+
+/* =========================================
+   OPEN WHEN LETTERS
+========================================= */
+const openwhen = document.getElementById("openwhen");
+
+if (openwhen) {
+  openwhen.addEventListener("mouseenter", () => {
+    openwhen.classList.add("active");
+  });
+
+  openwhen.addEventListener("mouseleave", () => {
+    openwhen.classList.remove("active");
+  });
+
+  openwhen.addEventListener("click", () => {
+    openOverlay("OpenWhen");
+  });
+}
+
+
+/* ======================================================
+   IPOD ICON – HOVER + CLICK
+====================================================== */
+
+const ipod = document.getElementById("ipod");
+
+if (ipod) {
+  ipod.addEventListener("mouseenter", () => {
+    ipod.classList.add("active");
+  });
+
+  ipod.addEventListener("mouseleave", () => {
+    ipod.classList.remove("active");
+  });
+
+  ipod.addEventListener("click", () => {
+    if (typeof openIpodOverlay === "function") {
+      openIpodOverlay();
+    } else {
+      console.warn("iPod overlay not loaded");
+    }
   });
 }

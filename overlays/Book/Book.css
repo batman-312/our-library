@@ -24,6 +24,7 @@
 
 .book-wrapper {
   position: relative;
+  overflow: visible;
 }
 
 /* Close button */

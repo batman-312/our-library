@@ -680,3 +680,70 @@ filter:
   opacity: 0;
   backdrop-filter: blur(0px);
 }
+
+
+.openwhen-icon {
+  position: absolute;
+  left: 43%;
+  bottom: 55%;
+
+  width: 60px;
+  height: 60px;
+
+  background: url("Assets/Images/envelope-stack.png") center / contain no-repeat;
+
+  cursor: pointer;
+
+  filter: brightness(0.8) drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.openwhen-icon:hover {
+  transform: translateY(-8px) scale(1.05);
+  filter: brightness(1);
+}
+
+
+
+.ipod-icon {
+  position: absolute;
+  left: 34%;
+  bottom: 25%;
+
+  width: 110px;
+  height: 110px;
+
+  background: url("Assets/Images/ipod-icon.png") center / contain no-repeat;
+
+  cursor: pointer;
+  opacity: 0.9;
+
+  transform: rotate(-8deg);
+
+  filter:
+    brightness(0.8)
+    contrast(1.1)
+  
+    drop-shadow(0 10px 18px rgba(0,0,0,0.5));
+
+  transition:
+    transform 0.35s cubic-bezier(.22,1,.36,1),
+    filter 0.35s ease,
+    opacity 0.35s ease;
+  animation: ipodGlow 4s infinite alternate;
+}
+
+@keyframes ipodGlow {
+  from { filter: drop-shadow(0 0 4px rgba(255,255,255,0.1)); }
+  to   { filter: drop-shadow(0 0 10px rgba(255,255,255,0.25)); }
+}
+
+.ipod-icon:hover {
+  transform: rotate(-4deg) translateY(-6px) scale(1.05);
+
+  filter:
+    brightness(1)
+    drop-shadow(0 18px 28px rgba(0,0,0,0.6));
+
+  opacity: 1;
+}

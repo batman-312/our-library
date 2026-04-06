@@ -15,7 +15,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For You, My Love ❤️</title>
+  <title>Our Library</title>
 
   <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="overlays/lyrics/lyrics.css" />
@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="overlays/papers/papers.css">
     <link rel="stylesheet" href="overlays/special-book/special-book.css">
     <link rel="stylesheet" href="overlays/photo/photo.css">
+    <link rel="stylesheet" href="overlays/openwhenletters/openwhenletters.css">
+    <link rel="stylesheet" href="overlays/ipod/ipod.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -38,9 +40,9 @@
   rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cantata+One&display=swap" rel="stylesheet">
-
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -87,28 +89,7 @@
 
   </div>
 
-  <div id="book-overlay" class="book-overlay hidden">
-<div class="book-wrapper">
-    <button class="book-close">×</button>
-
-    <div class="book-open">
-  <div class="page left">
-    <p id="page-left"></p>
-  </div>
-
-  <div class="page right">
-    <p id="page-right"></p>
-  </div>
-</div>
-
-<div class="book-nav">
-  <button id="prev-page">‹</button>
-  <button id="next-page">›</button>
-</div>
-      </div>
-    </div>
-  </div>
-</div>
+ 
 
   <div id="special-book-overlay" class="special-book-overlay">
     <div class="special-book-wrapper">
@@ -145,6 +126,11 @@
 <audio id="pagePrevSound" src="overlays/Book/prev.wav" preload="auto"></audio>
 </div>
   
+  <div class="openwhen-icon" id="openwhen">
+
+
+  </div>
+
 
  <div id="intro-blur">
   <div class="intro-text">
@@ -163,8 +149,9 @@
   class="tone-arm-overlay"
   alt=""
 >
-  
 </div>
+
+<div class="ipod-icon" id="ipod"></div>
 
   <div id="overlay-root"></div>
 
@@ -174,7 +161,8 @@
     <script src="overlays/papers/papers.js"></script>
     <script src="overlays/special-book/special-book.js"></script>
     <script src="overlays/photo/photo.js"></script>
-
+    <script src="overlays/openwhenletters/openwhenletters.js"></script>
+    <script src="overlays/ipod/ipod.js"></script>
 
 
 </body>

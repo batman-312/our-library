@@ -120,13 +120,39 @@ function openLetterOverlay(content) {
   overlay.innerHTML = `
     <div class="letter-paper">
       <button class="letter-close">×</button>
-      <div class="letter-content">${content}</div>
+      <div class="letter-content" id="letter-text"></div>
     </div>
   `;
 
   root.appendChild(overlay);
 
+  const textEl = overlay.querySelector("#letter-text");
+  typeWriter(textEl, content, 15);
+
   overlay.querySelector(".letter-close").onclick = () => {
     overlay.remove();
   };
+}
+
+function typeWriter(element, html, speed = 10) {
+  let i = 0;
+  element.innerHTML = "";
+
+  function type() {
+    if (i < html.length) {
+
+      // handle <br> properly
+      if (html.substring(i, i + 4) === "<br>") {
+        element.innerHTML += "<br>";
+        i += 4;
+      } else {
+        element.innerHTML += html.charAt(i);
+        i++;
+      }
+
+      setTimeout(type, speed);
+    }
+  }
+
+  type();
 }

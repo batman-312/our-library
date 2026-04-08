@@ -111,23 +111,3 @@ function closeBook() {
   }, 400);
 }
 
-bookClose.addEventListener("click", closeBook);
-
-/* Navigation (instant page switch + sound) */
-nextBtn.addEventListener("click", () => {
-  if (spreadIndex < Math.floor(pages.length / 2) - 1) {
-    spreadIndex++;
-    renderPages();
-
-    playWithRandomPitch(nextSound);
-  }
-});
-
-prevBtn.addEventListener("click", () => {
-  if (spreadIndex > 0) {
-    spreadIndex--;
-    renderPages();
-
-    playWithRandomPitch(prevSound);
-  }
-});

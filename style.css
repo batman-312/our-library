@@ -684,66 +684,108 @@ filter:
 
 .openwhen-icon {
   position: absolute;
-  left: 43%;
-  bottom: 55%;
+  left: 50%;
+  bottom: 57.2%;
 
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 
   background: url("Assets/Images/envelope-stack.png") center / contain no-repeat;
 
   cursor: pointer;
 
-  filter: brightness(0.8) drop-shadow(0 10px 15px rgba(0,0,0,0.5));
-  transition: transform 0.3s ease, filter 0.3s ease;
+ transform:
+    perspective(800px)
+    rotateX(35deg)
+    rotateZ(0deg)
+    scaleY(0.9);
+
+  filter: brightness(0.75)
+    contrast(1.1)
+    saturate(0.6)
+    sepia(12%)
+    drop-shadow(0 12px 16px rgba(0, 0, 0, 0.603));
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .openwhen-icon:hover {
-  transform: translateY(-8px) scale(1.05);
-  filter: brightness(1);
+  transform:
+    perspective(800px)
+    rotateX(35deg)
+    rotateZ(0deg)
+    translateY(-6px)
+    scale(1.01);
+
+  filter:
+   brightness(0.75)
+    contrast(1.1)
+    saturate(0.6)
+    sepia(12%)
+    drop-shadow(0 12px 16px rgb(0, 0, 0));
 }
 
 
 
 .ipod-icon {
-  position: absolute;
-  left: 34%;
-  bottom: 25%;
+  position: absolute; 
+  left: 18.3%;
+  bottom: 26%;
 
-  width: 110px;
-  height: 110px;
+  z-index: 9999999;
+
+  width: 40px;
+  height: 40px;
 
   background: url("Assets/Images/ipod-icon.png") center / contain no-repeat;
 
   cursor: pointer;
   opacity: 0.9;
 
-  transform: rotate(-8deg);
+  transform:
+    perspective(800px)
+    rotateX(35deg)
+    rotateZ(0deg)
+    scaleY(0.9);
 
-  filter:
-    brightness(0.8)
+  filter: brightness(0.75)
     contrast(1.1)
-  
-    drop-shadow(0 10px 18px rgba(0,0,0,0.5));
+    saturate(0.6)
+    sepia(12%)
+    drop-shadow(0 12px 16px rgb(0, 0, 0));
 
   transition:
-    transform 0.35s cubic-bezier(.22,1,.36,1),
-    filter 0.35s ease,
-    opacity 0.35s ease;
-  animation: ipodGlow 4s infinite alternate;
-}
-
-@keyframes ipodGlow {
-  from { filter: drop-shadow(0 0 4px rgba(255,255,255,0.1)); }
-  to   { filter: drop-shadow(0 0 10px rgba(255,255,255,0.25)); }
+    transform 0.25s ease,
+    filter 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .ipod-icon:hover {
-  transform: rotate(-4deg) translateY(-6px) scale(1.05);
+ transform:
+    perspective(800px)
+    rotateX(35deg)
+    rotateZ(0deg)
+    translateY(-6px)
+    scale(1.01);
 
   filter:
-    brightness(1)
-    drop-shadow(0 18px 28px rgba(0,0,0,0.6));
+   brightness(0.75)
+    contrast(1.1)
+    saturate(0.6)
+    sepia(12%)
+    drop-shadow(0 12px 16px rgb(0, 0, 0));
 
   opacity: 1;
+}
+.background.night .ipod-icon {
+
+ filter:
+    brightness(0.3)
+    contrast(1.1)
+    saturate(0.8)
+    sepia(12%)
+    drop-shadow(0 0 8px rgba(0, 0, 0, 0.78));
 }

@@ -63,7 +63,7 @@ function openIpodOverlay() {
 const playlists = [
   {
     name: "Reminder of You",
-    thumbnail: "Assets/Images/playlist1.png",
+    thumbnail: "Assets/Images/reminder-of-you-cover.jpg",
     songs: [
       {
   title: "Until I Found You",
@@ -212,11 +212,33 @@ const playlists = [
     name: "❤️❤️",
     thumbnail: "Assets/Images/playlist2.png",
     songs: [
-      { 
-        title: "Pal Pal Dil Ke Paas", 
-        file: "https://res.cloudinary.com/dxlkxqmax/video/upload/v1775610019/pal-pal-dil-ke-paas_auvmlv.mp3",
-        thumbnail: "Assets/Images/pal-pal-dil-ke-paas.jpg"
-      }
+    { title: "Pal Pal Dil Ke Paas", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775610019/pal-pal-dil-ke-paas_auvmlv.mp3", thumbnail: "Assets/Images/playlist2/1.jpg" },
+    { title: "O Rangrez", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775610005/O_Rangrez_brdh09.mp3", thumbnail: "Assets/Images/playlist2/2.jpg" },
+    { title: "Tum Tak", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609898/Tum_Tak_qjrswh.mp3", thumbnail: "Assets/Images/playlist2/3.jpg" },
+    { title: "Raat Bhar", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609898/Raat_Bhar_q5yi4n.mp3", thumbnail: "Assets/Images/playlist2/4.jpg" },
+    { title: "Pehli Nazar Mein", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609897/Pehli_Nazar_Mein_qley5v.mp3", thumbnail: "Assets/Images/playlist2/5.jpg" },
+    { title: "Tera Hone Laga Hoon", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609893/Tera_Hone_Laga_Hoon_trdbmw.mp3", thumbnail: "Assets/Images/playlist2/6.jpg" },
+    { title: "Pani Da Rang", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609874/Pani_Da_Rang_zxdxvn.mp3", thumbnail: "Assets/Images/playlist2/7.jpg" },
+    { title: "Zaalima", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609864/Zaalima_scnp0a.mp3", thumbnail: "Assets/Images/playlist2/8.jpg" },
+    { title: "Main Rang Sharbaton Ka", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609863/Main_rang_sharbaton_ka_ljnfw2.mp3", thumbnail: "Assets/Images/playlist2/9.jpg" },
+    { title: "Tu Hi Meri Shab Hai", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609860/Tu_Hi_Meri_Shab_Hai_htvnmf.mp3", thumbnail: "Assets/Images/playlist2/10.jpg" },
+    { title: "Ye Fitoor Mera", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609858/Ye_Fitoor_Mera_uvz8fs.mp3", thumbnail: "Assets/Images/playlist2/11.jpg" },
+    { title: "Ye Tune Kya Kiya", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609839/Ye_Tune_Kya_Kiya_ep2guf.mp3", thumbnail: "Assets/Images/playlist2/15.jpg" },
+    { title: "Jeene Laga Hoon", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609837/Jeene_Laga_Hoon_fky7zm.mp3", thumbnail: "Assets/Images/playlist2/12.jpg" },
+    { title: "Laapata", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609828/Laapata_ffyjmh.mp3", thumbnail: "Assets/Images/playlist2/13.jpg" },
+    { title: "I Love You", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609816/I_Love_you_qk9f97.mp3", thumbnail: "Assets/Images/playlist2/14.jpg" },
+    { title: "Ishq Wala Love", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609814/Ishq_Wala_Love_dbks5d.mp3", thumbnail: "Assets/Images/playlist2/16.jpg" },
+    { title: "Tum Ho", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609813/Tum_Ho_i9ztv8.mp3", thumbnail: "Assets/Images/playlist2/17.jpg" },
+    { title: "Tum Se Hi", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609805/Tum_Se_Hi_ouno2a.mp3", thumbnail: "Assets/Images/playlist2/18.jpg" },
+    { title: "Guzarish", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609795/Guzarish_mvyjuy.mp3", thumbnail: "Assets/Images/playlist2/19.jpg" },
+    { title: "Finding Her", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609780/Finding_Her_jvrqsp.mp3", thumbnail: "Assets/Images/playlist2/20.jpg" },
+    { title: "Hoor", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609769/Hoor_izmhpx.mp3", thumbnail: "Assets/Images/playlist2/21.jpg" },
+    { title: "Teri Jhuki Nazar", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609758/Teri_Jhuki_Nazar_nilj7f.mp3", thumbnail: "Assets/Images/playlist2/22.jpg" },
+    { title: "Tere Liye", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609754/Tere_Liye_ltcgaq.mp3", thumbnail: "Assets/Images/playlist2/23.jpg" },
+    { title: "Haareya", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609749/Haareya_e7l2g8.mp3", thumbnail: "Assets/Images/playlist2/24.jpg" },
+    { title: "Tu Chahiye", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609738/Tu_Chahiye_alxw8k.mp3", thumbnail: "Assets/Images/playlist2/25.jpg" },
+    { title: "Dil Diyan Gallan", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609725/Dil_Diyan_Gallan_sk8bce.mp3", thumbnail: "Assets/Images/playlist2/26.jpg" },
+    { title: "Chaar Kadam", file: "https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775609716/Chaar_Kadam_c0g3wb.mp3", thumbnail: "Assets/Images/playlist2/27.jpg" },
     ]
   }
 ];
@@ -247,21 +269,23 @@ function openPlaylist(index) {
   menu.innerHTML = `
     <div class="ipod-back" onclick="renderPlaylists()">← Back</div>
 
-  ${playlist.songs.map((s, i) => `
-  <div class="ipod-item" onclick="playSong(${index}, ${i})">
-    
-    <img src="${s.thumbnail}" class="ipod-thumb" />
-    <span>${s.title}</span>
+    ${playlist.songs.map((s, i) => `
+      <div class="ipod-item" onclick="playSong(${index}, ${i})">
+        <img src="${s.thumbnail}" class="ipod-thumb" />
+        <span>${s.title}</span>
+      </div>
+    `).join("")}
 
-  </div>
-`).join("")}
-
-<!-- SPOTIFY LINK -->
-<div class="ipod-item spotify-link" onclick="openSpotify()">
-  <span>Open on Spotify</span>
-</div>
-  `; 
-
+    ${
+      playlist.name.toLowerCase() === "reminder of you"
+        ? `
+        <div class="ipod-item spotify-link" onclick="openSpotify()">
+          <span>Open on Spotify</span>
+        </div>
+        `
+        : ""
+    }
+  `;
 }
 
 /* =========================
@@ -290,10 +314,15 @@ function renderNowPlaying(song, playlistName) {
 ========================= */
 let audio = new Audio();
 
+const clickSound = new Audio("https://res.cloudinary.com/dxlkxqmax/video/upload/q_auto/f_auto/v1775651966/150382__orginaljun__soft-sound-plastic-button-click_w7wufg.mp3");
+clickSound.volume = 0.3; 
+
 audio.addEventListener("ended", () => {
   nextSong();
 });
-
+audio.addEventListener("play", () => {
+  audio.volume = 0.1;
+});
 audio.preload = "metadata";
 audio.crossOrigin = "anonymous";
 
@@ -307,15 +336,26 @@ function playSong(pIndex, sIndex) {
   const song = playlists[pIndex].songs[sIndex];
 
   audio.src = song.file;
+
+  audio.volume = 0.4;  // 👈 SET BEFORE
   audio.play();
 
-  renderNowPlaying(song, playlists[pIndex].name);
-}
+  setTimeout(() => {
+    audio.volume = 0.15;
+    console.log("forced volume:", audio.volume);
+  }, 50);
+
+  renderNowPlaying(song, playlists[pIndex].name);}
+
+console.log("volume:", audio.volume);
 
 /* =========================
    CONTROLS (WHEEL)
 ========================= */
 function togglePlay() {
+clickSound.currentTime = 0;
+  clickSound.play();
+
   if (!audio.src) return;
 
   if (audio.paused) audio.play();
@@ -323,6 +363,9 @@ function togglePlay() {
 }
 
 function nextSong() {
+  clickSound.currentTime = 0;
+clickSound.play();
+
   const playlist = playlists[currentPlaylist];
   if (!playlist) return;
 
@@ -331,6 +374,9 @@ function nextSong() {
 }
 
 function prevSong() {
+  clickSound.currentTime = 0;
+  clickSound.play();
+
   const playlist = playlists[currentPlaylist];
   if (!playlist) return;
 

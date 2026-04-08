@@ -62,7 +62,7 @@ function openWhenOverlay() {
       content: "My love,<br> If you ever feel the distance growing between us, know this: I’ll fight for us, always. I cannot lose you. I won’t let go.<br>Please never doubt my love for you…<br>I love you so so much!"
     },
     {
-      title: "..you I don't<br>answer",
+      title: "..I don't<br>answer",
       content: "My love,<br> I am sorry I am not available right now. Remember that whatever situation I’m in, you’re the only thing on my mind. I miss you so much, it feels like dying not being able to kiss you, to hold you.<br>Sorry to leave you waiting… I’ll be back ASAP.<br>I love youuu!"
     },
     {
